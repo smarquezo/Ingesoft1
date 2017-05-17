@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>Rent House </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/json" href="data.json">
+  <  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color:black;
+      background: url("http://scromy.com/wp-content/uploads/2017/01/chicago-black-and-white-wallpaper-high-quality-resolution.jpg")
+  }
+  h2 {
+      font-size: 40px;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 30px;
+      line-height: 1.375em;
+      color: white;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: black;
+      color: white;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .logo-small {
+      color: white;
+      font-size: 50px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  
+ 
+  .item h4 {
+      font-size: 30px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+ 
+  .panel-heading {
+      color: white !important;
+      background-color: black !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: rgb(118, 118, 118);
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: blue !important;
+      background-color: white !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .sidenav {
+      padding-top: 20px;
+      background-color: white;
+      height: 100%;
+  }
+       
+  footer  {
+      background-color: white;
+      color: white;
+      padding: 15px;
+      animation-name: changeColor;
+      animation-duration: 1s;  
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+ 
+  </style>
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">HOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">MAP</a></li>
+        <li><a href="#pricing">CONTACT</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Rent house for students</h1> 
+</div>
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Company </h2><br>
+      <h4>We are a company focused on helping new students at University Illinois Chicago to get a home based on certain selection criteria. </h4>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+  </div>
+</div>
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>Selection criteria</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-eye-open logo-small"></span>
+      <h4>SECURITY</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-piggy-bank logo-small"></span>
+      <h4>ECONOMY</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-road logo-small" ></span>
+      <h4>TRANSPORT</h4>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+
+  <div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Choose your option</h2>
+  <div class="col-sm-2  sidenav text-center">
+      <ul class="nav nav-sidebar">
+        <li onclick="placeRent()"><a href="#"><img src="https://image.freepik.com/iconos-gratis/casa-esquema-con-base-blanca_318-33801.jpg" style="width: 40%; margin-right:8px;">Places </a></li>
+        <li onclick="libraryMap()"><a href="#"><img src="https://image.freepik.com/iconos-gratis/libros-de-pila-de-tres_318-45543.jpg" style="width: 40%;margin-right: 8px;">Libraries</a></li>
+        <li onclick="policeMap()"><a href="#"><img src="https://image.freepik.com/iconos-gratis/sombrero-de-un-policia_318-43533.jpg" style="width: 40%;margin-right: 8px;">Police Stations</a></li>
+        <li onclick="fireMap();"><a href="#"><img src="http://es.seaicons.com/wp-content/uploads/2015/11/Users-Fireman-icon.png" style="width: 40%;margin-right: 8px;">Fire Stations</a></li>
+        <li onclick="crimeMap();"><a href="#"><img src="https://gromland.files.wordpress.com/2008/09/ladron.jpg" style="width: 40%;margin-right: 8px;">Crimes</a></li>
+        <li onclick="hospitalMap();"><a href="#"><img src="https://image.freepik.com/iconos-gratis/signo-de-hospital_318-52809.jpg" style="width: 40%;margin-right: 8px;">Hospital</a></li>
+      </ul>
+    </div>
+  
+  <div id="googleMap" style="height:400px;width:100%;"></div>
+  <script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(41.87080, -87.6505005);
+  var mapProp = {center:myCenter, zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+  infowindow = new google.maps.InfoWindow({
+               content: ""
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent('<b>'+"Department of Computer Science – University of Illinois"+'</b>');
+     infowindow.open(map, marker);
+    });
+}
+  function placeRent() {
+    var myCenter = new google.maps.LatLng(41.87080, -87.6505005);
+    var mapProp = {center:myCenter, zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    infowindow = new google.maps.InfoWindow({
+                 content: ""
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent('<b>'+"Department of Computer Science – University of Illinois"+'</b>');
+       infowindow.open(map, marker);
+      });
+      //dataset places to rent
+      var xmlhttp = new XMLHttpRequest();
+        var url = "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.json?accessType=DOWNLOAD";
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var myArr = xmlhttp.responseText;
+                var text = myArr;
+                var json = JSON.parse(text);              
+                var coordinates = [];
+                for (var i = 0; i < 200; i++) {  
+                    coordinates.push(new google.maps.LatLng(json.data[i][19], 
+                    json.data[i][20]));  
+                };
+                var houses = {  
+                    url: "http://construkom.com/wp-content/uploads/2016/10/icono-rojo-con-simbolo-de-casa.jpg",
+                    scaledSize: new google.maps.Size(35, 35),
+                };
+                var infoWindow  = new google.maps.InfoWindow();
+                for (var i = 0; i < coordinates.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: coordinates[i],
+                        map: map, 
+                        title: json.data[i][11],
+                        type: json.data[i][10],
+                        address : json.data[i][12],
+                        tel: json.data[i][14],
+                        icon: houses
+                })
+                google.maps.event.addListener(marker, 'click', function(){ 
+                    infoWindow.setContent('<b>'+this.title+'</b>'+'</br>'+'</br>'+
+                                        '<b>'+"Type: "+'</b>'+this.type+'</br>'+
+                                        '<b>'+"Address: "+'</b>'+this.address+'</br>'+
+                                        '<b>'+"Phone: "+'</b>'+this.tel);
+                    infoWindow.open(map, this);
+                });
+                }
+            }
+        }
+    }
+  function libraryMap() {
+    var myCenter = new google.maps.LatLng(41.87080, -87.6505005);
+    var mapProp = {center:myCenter, zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    infowindow = new google.maps.InfoWindow({
+                 content: ""
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent('<b>'+"Department of Computer Science – University of Illinois"+'</b>');
+       infowindow.open(map, marker);
+      });
+      //dataset library    
+     var xmlhttp = new XMLHttpRequest();
+      var url = "https://data.cityofchicago.org/api/views/x8fc-8rcq/rows.json?accessType=DOWNLOAD";
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+      xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              var myArr = xmlhttp.responseText;
+              var text = myArr;
+              var json = JSON.parse(text);            
+              var libraries = [];
+              for (var i = 0; i < 79; i++) {   
+                  libraries.push(new google.maps.LatLng(json.data[i][18][1], 
+                  json.data[i][18][2]));  
+              };
+              var library = {  
+                  url: "https://image.freepik.com/vector-gratis/icono-de-ubicacion-de-biblioteca_23-2147501233.jpg",
+                  scaledSize: new google.maps.Size(35, 35),
+              };
+              var infoWindow  = new google.maps.InfoWindow();
+              for (var i = 0; i < libraries.length; i++) {
+                  var marker = new google.maps.Marker({
+                      position: libraries[i],
+                      map: map, 
+                      title: json.data[i][8],
+                      address : json.data[i][12],
+                      hours: json.data[i][9],
+                      tel: json.data[i][16],
+                      icon: library
+              })
+              google.maps.event.addListener(marker, 'click', function(){ 
+                  infoWindow.setContent('<b>'+this.title+'</b>'+'</br>'+'</br>'+
+                                      '<b>'+"Address: "+'</b>'+this.address+'</br>'+
+                                      '<b>'+"Hours Operation: "+'</b>'+this.hours+'</br>'+
+                                      '<b>'+"Phone: "+'</b>'+this.tel);
+                  infoWindow.open(map, this);
+              });
+              }
+          }
+      }
+    }   
+  function policeMap() {
+    var myCenter = new google.maps.LatLng(41.87080, -87.6505005);
+    var mapProp = {center:myCenter, zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    infowindow = new google.maps.InfoWindow({
+                 content: ""
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent('<b>'+"Department of Computer Science – University of Illinois"+'</b>');
+       infowindow.open(map, marker);
+      });
+      //dataset police stations
+      var xmlhttp = new XMLHttpRequest();
+      var url = "https://data.cityofchicago.org/api/views/z8bn-74gv/rows.json?accessType=DOWNLOAD";
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+      xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              var myArr = xmlhttp.responseText;
+              var text = myArr;
+              var json = JSON.parse(text);           
+              var stations = [];
+              for (var i = 0; i < 22; i++) {   
+                  stations.push(new google.maps.LatLng(json.data[i][20], 
+                  json.data[i][21]));  
+              var polices = {  
+                  url: "https://previews.123rf.com/images/alexwhite/alexwhite1511/alexwhite151100153/47509419-la-polic-a-c-rculo-rojo-3d-dise-o-moderno-icono-de-plano-sobre-fondo-blanco-Foto-de-archivo.jpg",
+                  scaledSize: new google.maps.Size(35, 35),
+              };
+              var infoWindow  = new google.maps.InfoWindow();            
+              for (var i = 0; i < stations.length; i++) {
+                  var marker = new google.maps.Marker({
+                      position: stations[i],
+                      map: map, 
+                      title: json.data[i][9],
+                      address : json.data[i][10],
+                      tel: json.data[i][15][0],
+                      url: json.data[i][14][0],
+                      icon: polices
+              })
+              google.maps.event.addListener(marker, 'click', function(){ 
+                  infoWindow.setContent('<b>'+this.title+'</b>'+'</br>'+'</br>'+
+                                      '<b>'+"Address: "+'</b>'+this.address+'</br>'+
+                                      '<b>'+"Phone: "+'</b>'+this.tel+'</br>'+
+                                      '<b>'+"URL: "+'</b>'+this.url);
+                  infoWindow.open(map, this);
+              });
+              }
+          }
+      }
+    }
+  }
+  function fireMap() {
+    var myCenter = new google.maps.LatLng(41.87080, -87.6505005);
+    var mapProp = {center:myCenter, zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    infowindow = new google.maps.InfoWindow({
+                 content: ""
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent('<b>'+"Department of Computer Science – University of Illinois"+'</b>');
+       infowindow.open(map, marker);
+      });
+       //dataset fire stations
+      var xmlhttp = new XMLHttpRequest();
+      var url = "https://data.cityofchicago.org/api/views/28km-gtjn/rows.json?accessType=DOWNLOAD";
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+      xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              var myArr = xmlhttp.responseText;
+              var text = myArr;
+              var json = JSON.parse(text);            
+              var fire = [];
+              for (var i = 0; i < 91; i++) {   
+                  fire.push(new google.maps.LatLng(json.data[i][14][1], 
+                  json.data[i][14][2]));  
+              };
+              var fires = {  
+                  url: "https://thumbs.dreamstime.com/z/iconos-planos-del-ejemplo-del-vector-del-casco-del-bombero-47022545.jpg",
+                  scaledSize: new google.maps.Size(35, 35),
+              };
+              var infoWindow  = new google.maps.InfoWindow();
+              for (var i = 0; i < fire.length; i++) {
+                  var marker = new google.maps.Marker({
+                      position: fire[i],
+                      map: map, 
+                      address : json.data[i][9],
+                      zip: json.data[i][12],
+                      icon: fires
+              })
+              google.maps.event.addListener(marker, 'click', function(){ 
+                  infoWindow.setContent('<b>'+"Fire Station"+'</b>'+'</br>'+'</br>'+
+                                      '<b>'+"Address: "+'</b>'+this.address+'</br>'+
+                                      '<b>'+"Zip: "+'</b>'+this.zip);
+                  infoWindow.open(map, this);
+              });
+              }
+          }
+      }
+    }
+   
+  function crimeMap() {
+    var myCenter = new google.maps.LatLng(41.87080, -87.6505005);
+    var mapProp = {center:myCenter, zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+    infowindow = new google.maps.InfoWindow({
+                 content: ""
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent('<b>'+"Department of Computer Science – University of Illinois"+'</b>');
+       infowindow.open(map, marker);
+      });
+      //dataset crimes
+      var xmlhttp = new XMLHttpRequest();
+      var url = "https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.json?accessType=DOWNLOAD";
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+      xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              var myArr = xmlhttp.responseText;
+              var text = myArr;
+              var json = JSON.parse(text);
+              var crime = [];
+              for (var i = 0; i < 200; i++) {  
+                  crime.push(new google.maps.LatLng(json.data[i][20], 
+                  json.data[i][21]));  
+              };
+              var crimes = {  
+                  url: "https://previews.123rf.com/images/alexutemov/alexutemov1603/alexutemov160300253/53326749-Ladr-n-vector-de-alerta-Ladr-n-ilustraci-n-de-alerta-alerta-ladr-n-aislado-en-blanco-Ladr-n-icono-de-Foto-de-archivo.jpg",
+                  scaledSize: new google.maps.Size(35, 35),
+              };
+              var infoWindow  = new google.maps.InfoWindow();
+              for (var i = 0; i < crime.length; i++) {
+                  var marker = new google.maps.Marker({
+                      position: crime[i],
+                      map: map, 
+                      title: json.data[i][12],
+                      date: json.data[i][9],
+                      address : json.data[i][10],
+                      location: json.data[i][14],
+                      icon: crimes
+              })
+              google.maps.event.addListener(marker, 'click', function(){ 
+                  infoWindow.setContent('<b>'+"Type: "+'</b>'+this.title+'</br>'+
+                                      '<b>'+"Date: "+'</b>'+this.date+'</br>'+
+                                      '<b>'+"Address: "+'</b>'+this.address+'</br>'+
+                                      '<b>'+"Location: "+'</b>'+this.location);
+                  infoWindow.open(map, this);
+              });
+              }
+          }
+      }
+    }
+ // function hospitalMap() {
+ //    var myCenter = new google.maps.LatLng(41.87080, -87.6505005);
+ //    var mapProp = {center:myCenter, zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
+ //    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+ //    var marker = new google.maps.Marker({position:myCenter});
+ //    marker.setMap(map);
+ //    infowindow = new google.maps.InfoWindow({
+ //                 content: ""
+ //      });
+ //      google.maps.event.addListener(marker, 'click', function() {
+ //      infowindow.setContent('<b>'+"Department of Computer Science – University of Illinois"+'</b>');
+ //       infowindow.open(map, marker);
+ //      });
+ //      //dataset hospital   
+    //  var xmlhttp = new XMLHttpRequest();
+    //   var url = "https://data.cityofchicago.org/api/views/mw69-m6xi/rows.json?accessType=DOWNLOAD";
+    //   xmlhttp.open("GET", url, true);
+    //   xmlhttp.send();
+    //   xmlhttp.onreadystatechange = function() {
+    //       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    //           var myArr = xmlhttp.responseText;
+    //           var text = myArr;
+    //           var json = JSON.parse(text);            
+    //           var hospitals = [];
+    //           for (var i = 0; i < 7; i++) {   
+    //               hospitals.push(new google.maps.LatLng(json.data[i][20], 
+    //               json.data[i][21]));  
+    //           };
+    //           var hospital = {  
+    //               url: "https://previews.123rf.com/images/bharatmanoj/bharatmanoj1501/bharatmanoj150100234/35539249-Icono-Muy-til-del-hospital-de-sesi-n-en-el-bot-n-rojo-Eps-10--Foto-de-archivo.jpg",
+    //               scaledSize: new google.maps.Size(35, 35),
+    //           };
+    //           var infoWindow  = new google.maps.InfoWindow();
+    //           for (var i = 0; i < hospitals.length; i++) {
+    //               var marker = new google.maps.Marker({
+    //                   position: hospitals[i],
+    //                   map: map, 
+    //                   title: json.data[i][8],
+    //                   address : json.data[i][12],
+    //                   hours: json.data[i][9],
+    //                   tel: json.data[i][16],
+    //                   icon: hospital
+    //           })
+    //           google.maps.event.addListener(marker, 'click', function(){ 
+    //               infoWindow.setContent('<b>'+this.title+'</b>'+'</br>'+'</br>'+
+    //                                   '<b>'+"Address: "+'</b>'+this.address+'</br>'+
+    //                                   '<b>'+"Hours Operation: "+'</b>'+this.hours+'</br>'+
+    //                                   '<b>'+"Phone: "+'</b>'+this.tel);
+    //               infoWindow.open(map, this);
+    //           });
+    //           }
+    //       }
+    //   }
+    // } 
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKmY93-zDKqwhp13NKpQmcisFMJWSIxvE&callback=myMap"></script>
+
+
+</div>
+
+
+
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      
+      <p style="color:white;"><span class="glyphicon glyphicon-map-marker" style="color:white;"></span> Bogota, Col</p>
+      <p style="color:white;"><span class="glyphicon glyphicon-phone" style="color:white;"></span> +57 4567898762</p>
+      <p style="color:white;"><span class="glyphicon glyphicon-envelope" style="color:white;"></span> smarquezo@unal.edu.co</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="http://www.ironhacks.com/" title="Visit Ironhacks">www.ironhacks.com</a></p>
+</footer>
+</body>
+</html>
